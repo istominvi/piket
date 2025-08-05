@@ -9,3 +9,4 @@
 - [Безопасность](docs/security.md)
 
 [Спецификация формы регистрации](docs/registration.md)
+[Спецификация формы входа](docs/login.md)
