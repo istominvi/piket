@@ -8,5 +8,5 @@
 - [Архитектура и технологии](docs/architecture.md)
 - [Безопасность](docs/security.md)
 
-[Спецификация формы регистрации](docs/registration.md)
-[Спецификация формы входа](docs/login.md)
+1. [Спецификация формы регистрации](docs/registration.md)
+2. [Спецификация формы входа](docs/login.md)
