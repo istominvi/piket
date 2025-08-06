@@ -10,3 +10,4 @@
 
 1. [Спецификация формы регистрации](docs/registration.md)
 2. [Спецификация формы входа](docs/login.md)
+3. [Организации](docs/organizations.md)
