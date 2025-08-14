@@ -72,13 +72,18 @@
 - `GET /api/users/:id` — профиль другого пользователя (с учётом приватных полей).
 
 ### Организации
-- `GET /api/organizations` — список доступных пользователю организаций.
-- `POST /api/organizations` — создание новой организации.
-- `GET /api/organizations/:id` — данные организации.
-- `PATCH /api/organizations/:id` — обновление организации.
-- `DELETE /api/organizations/:id` — удаление (перемещение в архив).
-- `GET /api/organizations/:id/access` — список прав пользователей.
-- `POST /api/organizations/:id/access` — изменение прав.
+
+- Базовый путь (рекомендуемый): **`/orgs`**
+- Алиас (устаревший): **`/organizations`** (сохраняется для обратной совместимости)
+
+Примеры:
+- `GET /orgs` — список доступных пользователю организаций
+- `POST /orgs` — создание новой организации
+- `GET /orgs/{id}` — данные организации
+- `PATCH /orgs/{id}` — обновление
+- `DELETE /orgs/{id}` — архивирование/удаление
+- `GET /orgs/{id}/access` — список прав пользователей
+
 
 ### Объекты
 - `GET /api/organizations/:orgId/objects` — список объектов организации.
