@@ -19,8 +19,8 @@
 ## Доменная схема
 
 - Клиент (SPA): **https://app.piket.pro**
-- API: **https://api.piket.pro** (базовый путь API: `/api/v1`)
-- CDN/статические файлы (по желанию): https://cdn.piket.pro
+- API: **https://api.piket.pro** (базовый путь: **`/v1`**)
+- CDN/статика (при необходимости): https://cdn.piket.pro
 
 ### Безопасность и куки
 - Авторизация через **HttpOnly** cookies, установленные **с доменом `api.piket.pro`** и `SameSite=Lax`.
