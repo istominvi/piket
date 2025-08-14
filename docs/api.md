@@ -144,4 +144,28 @@
     "subscriptionEnd": "2025-10-01"
   }
 ]
+```
+
+---
+
+## Конвенции API (дополнение)
+
+- Идентификаторы — **UUIDv4**. Дата/время — **ISO 8601, UTC**.
+- Аутентификация — через **HttpOnly cookies**: `access` (15–30 мин) и `refresh` (30–90 дней).
+  - `POST /auth/login` → Set-Cookie `access`, `refresh`
+  - `POST /auth/refresh` → обновление `access` по `refresh`
+  - `POST /auth/logout` → инвалидирует `refresh`, очищает куки
+- Пагинация запросов списка: `?page=&limit=` → ответ `{ data: [], page, limit, total }`.
+- Ошибки — формат **Problem+JSON** (`application/problem+json`):
+  ```json
+  {
+    "type": "https://api.piket.pro/errors/validation",
+    "title": "Validation Failed",
+    "status": 422,
+    "detail": "Field 'name' is required",
+    "instance": "/acts",
+    "errors": [{"field":"name","message":"Required"}]
+  }
+  ```
+
 
