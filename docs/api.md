@@ -68,6 +68,14 @@
 ### Организации
 - Базовый путь (рекомендуемый): **`/orgs`**
 
+Примеры:
+- `GET /orgs`
+- `POST /orgs`
+- `GET /orgs/{id}`
+- `PATCH /orgs/{id}`
+- `DELETE /orgs/{id}`
+- `GET /orgs/{id}/access`
+
 ## Активная организация (client-side)
 - Активная организация сохраняется **только в `sessionStorage`** (на уровне вкладки браузера).
 - Разные вкладки могут иметь **разные активные организации**.
@@ -83,40 +91,40 @@
 
 
 ### Объекты
-- `GET /api/organizations/:orgId/objects` — список объектов организации.
-- `POST /api/organizations/:orgId/objects` — создание объекта.
-- `GET /api/objects/:id` — данные объекта.
-- `PATCH /api/objects/:id` — обновление объекта.
-- `DELETE /api/objects/:id` — удаление (архив).
-- `GET /api/objects/:id/files` — список файлов объекта.
+- `GET /orgs/{orgId}/objects` — список объектов организации.
+- `POST /orgs/{orgId}/objects` — создание объекта.
+- `GET /objects/{id}` — данные объекта.
+- `PATCH /objects/{id}` — обновление объекта.
+- `DELETE /objects/{id}` — удаление (архив).
+- `GET /objects/{id}/files` — список файлов объекта.
 
 ### Файлы
-- `POST /api/objects/:id/files` — загрузка файла в объект.
-- `GET /api/files/:fileId` — информация о файле.
-- `DELETE /api/files/:fileId` — удаление файла (в корзину).
-- `PATCH /api/files/:fileId` — переименование или перемещение.
-- `GET /api/files/:fileId/download` — скачивание файла.
+- `POST /objects/{id}/files` — загрузка файла в объект.
+- `GET /files/{fileId}` — информация о файле.
+- `PATCH /files/{fileId}` — переименование/перемещение.
+- `DELETE /files/{fileId}` — удаление (в корзину).
+- `GET /files/{fileId}/download` — скачивание файла.
 
 ### Тарифные планы
-- `GET /api/plans` — список тарифов.
-- `GET /api/organizations/:orgId/plan` — текущий тариф организации.
-- `POST /api/organizations/:orgId/plan` — смена тарифа.
-- `GET /api/organizations/:orgId/payments` — история оплат.
+- `GET /plans` — список тарифов.
+- `GET /orgs/{orgId}/plan` — текущий тариф организации.
+- `POST /orgs/{orgId}/plan` — смена тарифа.
+- `GET /orgs/{orgId}/payments` — история оплат.
 
 ### Права доступа
-- `GET /api/access/:entityType/:entityId` — текущие права пользователей на сущность.
-- `POST /api/access/:entityType/:entityId` — изменение прав.
+- `GET /access/{entityType}/{entityId}` — текущие права пользователей на сущность.
+- `POST /access/{entityType}/{entityId}` — изменение прав.
 
 ### Аналитика
-- `GET /api/organizations/:orgId/analytics` — свод по организации.
-- `GET /api/objects/:objectId/analytics` — (зарезервировано, не используется в MVP).
+- `GET /orgs/{orgId}/analytics` — свод по организации.
+- `GET /objects/{objectId}/analytics` — (зарезервировано).
 
 ---
 
 ## Принципы именования
-- В URL всегда используется **множественное число** для коллекций (`/orgs`, `/objects`).
-- Для вложенных ресурсов используется иерархия `/parent/:id/child`.
-- Идентификаторы (`:id`) всегда в формате UUID.
+- Коллекции — во множественном числе: `/orgs`, `/objects`.
+- Вложенные ресурсы: `/parent/{id}/child`.
+- Идентификаторы ( `{id}` ) — UUID.
 
 ---
 
@@ -126,7 +134,7 @@
 ```json
 [
   {
-    "id": "uuid",
+    "id": "c6a9f2a0-9c1a-4b9b-9f6a-1f0e6d7a1111",
     "shortName": "ООО ДорСтрой",
     "inn": "1234567890",
     "plan": "PRO",
@@ -136,3 +144,4 @@
     "subscriptionEnd": "2025-10-01"
   }
 ]
+
