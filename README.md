@@ -32,10 +32,10 @@
 
 - [Организации](docs/orgs.md)
 - [Объекты](docs/objects.md)
-   - [Файлы](docs/files.md)
-   - Производство
-      - [Журнал работ](docs/works.md)
-      - [Участки](docs/areas.md)
+   [Файлы](docs/files.md)
+   [Производство]
+      [Журнал работ](docs/works.md)
+      [Участки](docs/areas.md)
    - Исполнение
       - [Акты](docs/acts.md)
       - [Тома](docs/tomes.md)
