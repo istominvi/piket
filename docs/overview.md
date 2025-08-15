@@ -24,7 +24,7 @@
 Иерархичность данных; наследование прав; автоматизация (автоподбор участков, расчёт объёмов); безопасность по умолчанию.
 
 ## 6. Архитектура (кратко)
-SPA на React (или Next.js для лендинга). Backend: Node.js (Express/Nest), PostgreSQL, файловое хранилище (локально/S3‑совместимое). Развёртывание в Docker, CI/CD — GitHub Actions.
+SPA на React или Next.js. Backend: Node.js (Express/Nest), PostgreSQL, файловое хранилище (локально/S3‑совместимое). Развёртывание в Docker, CI/CD — GitHub Actions.
 
 ## 7. Навигация и адреса
 Публичный сайт `piket.pro`; приложение `app.piket.pro`. Базовые маршруты: `/orgs`, `/objects`, `/files`, `/works`, `/areas`, `/tomes`, `/acts`.
