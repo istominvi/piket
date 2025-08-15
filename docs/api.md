@@ -156,3 +156,30 @@
   Ответ коллекции включает мета-блок:
   ```json
   { "data": [...], "meta": { "page": 1, "pageSize": 25, "total": 123 } }
+  ```
+- **Сортировка:** `?sort=field:asc,another:desc`
+- **Фильтрация:** зарезервированы `q` (поиск), `status`, `from`, `to` и др. по ресурсу.
+
+
+## Формат ошибок
+
+Все ошибки возвращаются как JSON:
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Некорректные параметры запроса",
+    "details": { "field": "pageSize", "reason": "must be <= 100" },
+    "requestId": "3a1c8b0d..."
+  }
+}
+```
+Коды: `UNAUTHORIZED`, `FORBIDDEN`, `NOT_FOUND`, `CONFLICT`, `VALIDATION_ERROR`, `RATE_LIMITED`, `INTERNAL`.
+
+## Принципы именования
+
+- Коллекции — множественное число: `/orgs`, `/orgs/{orgId}/objects`.
+- Вложенность — через `/parent/{id}/child`.
+- Идентификаторы — UUID в API; `slug` — только в SPA пермалинках.
+- Статусы и бизнес-правила описаны в профильных документах (например, печать — только через «Просмотр»).
+
