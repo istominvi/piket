@@ -32,10 +32,10 @@
 
 - [Организации](docs/orgs.md)
 - [Объекты](docs/objects.md)
-   [Файлы](docs/files.md)
-   [Производство]
-      [Журнал работ](docs/works.md)
-      [Участки](docs/areas.md)
+   - [Файлы](docs/files.md)
+   - [Производство]
+      - [Журнал работ](docs/works.md)
+      - [Участки](docs/areas.md)
    - Исполнение
       - [Акты](docs/acts.md)
       - [Тома](docs/tomes.md)
@@ -43,27 +43,6 @@
 - [Тарифные планы](docs/plans.md) — лимиты и влияние на функциональность.
 - [Права доступа](docs/access.md) — модель прав: Чтение / Редактирование / Управление доступом / Подписание и области их действия.
 
-
-<details>
-  <summary><strong>Организация</strong></summary>
-
-- [Организации](docs/orgs.md)
-- [Объекты](docs/objects.md)
-  <details>
-    <summary><strong>Объект (выбранный)</strong></summary>
-
-  - [Файлы](docs/files.md)
-  - <strong>Производство</strong>
-    - [Журнал работ](docs/works.md)
-    - [Участки](docs/areas.md)
-  - <strong>Исполнение</strong>
-    - [Акты](docs/acts.md)
-    - [Тома](docs/tomes.md)
-  - [Просмотр и печать](docs/viewer.md) — доступно из разделов выше
-
-  </details>
-
-</details>
 
 ## Использование репозитория
 
