@@ -28,6 +28,7 @@
 
 ### 1. Общие разделы
 - [Обзор и цели](docs/overview.md)
+- [Глоссарий](docs/glossary.md)
 - [Требования](docs/requirements.md)
 - [Архитектура](docs/architecture.md)
 - [Безопасность](docs/security.md)
