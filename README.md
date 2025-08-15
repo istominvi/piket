@@ -10,25 +10,10 @@
 - Участки: храним `startM/endM` (целые метры от нулевой точки) + человекочитаемые метки `ПК…` для UI.
 - Изоляция данных по организациям (org scope).
 
-## Как читать это ТЗ (быстрый маршрут)
-1. **Обзор и цели:** `docs/overview.md`
-2. **Права и роли:** `docs/access.md` — 4 уровня: Чтение / Редактирование / Управление доступом / Подписание
-3. **Ключевые разделы домена:**
-   - Объекты — `docs/objects.md`
-   - Участки — `docs/areas.md`
-   - Журнал работ — `docs/works.md`
-   - Акты — `docs/acts.md`
-   - Тома — `docs/tomes.md`
-   - Файлы — `docs/files.md`
-4. **Модуль печати:** `docs/viewer.md` — единственный способ печати (через диалог браузера)
-5. **Вход/Регистрация:** `docs/login.md`, `docs/registration.md`
-6. **Технические разделы:** Архитектура `docs/architecture.md`, Безопасность `docs/security.md`, API и URL-паттерны `docs/api.md`, Требования `docs/requirements.md`, Тарифы `docs/plans.md`
-
 ## Структура документации
 
 ### 1. Общие разделы
 - [Обзор и цели](docs/overview.md)
-- [Глоссарий](docs/glossary.md)
 - [Требования](docs/requirements.md)
 - [Архитектура](docs/architecture.md)
 - [Безопасность](docs/security.md)
